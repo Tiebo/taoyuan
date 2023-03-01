@@ -1,0 +1,104 @@
+{
+	"pages": [{
+			"path": "pages/home/home",
+			"style": {}
+		},
+		{
+			"path": "pages/cart/cart",
+			"style": {}
+		},
+		{
+			"path": "pages/message/message",
+			"style": {}
+		},
+		{
+			"path": "pages/user/user",
+			"style": {}
+		}, {
+			"path": "pages/list/tree/tree",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/commodity/commodity",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/list/hotel/hotel",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/list/shop/shop",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/list/article/article",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/list/articleBody/articleBody",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}
+	],
+	"style": {
+		"app-plus": {
+			"animationType": "fade-in",
+			"animationDuration": 300
+		}
+	},
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "桃源记",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+
+	"tabBar": {
+		"position": "bottom",
+		"borderStyle": "black",
+		"selectedColor": "#000000",
+		"list": [{
+				"pagePath": "pages/home/home",
+				"text": "首页",
+				"iconPath": "static/icon/home.png",
+				"selectedIconPath": "static/icon/home.png"
+			},
+			{
+				"pagePath": "pages/message/message",
+				"text": "消息",
+				"iconPath": "static/icon/message.png",
+				"selectedIconPath": "static/icon/message.png"
+			},
+			{
+				"pagePath": "pages/cart/cart",
+				"text": "购物车",
+				"iconPath": "static/icon/shopping-cart.png",
+				"selectedIconPath": "static/icon/shopping-cart.png"
+			},
+			{
+				"pagePath": "pages/user/user",
+				"text": "我的",
+				"iconPath": "static/icon/user.png",
+				"selectedIconPath": "static/icon/user.png"
+			}
+		]
+	}
+}

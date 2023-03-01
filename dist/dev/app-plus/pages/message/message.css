@@ -1,0 +1,61 @@
+
+.setting[data-v-3556fc04] {
+		width: 1.40625rem;
+		height: 1.40625rem;
+		float: right;
+		margin-top: 0.78125rem;
+}
+.hint[data-v-3556fc04] {
+		text-align: center;
+		position: absolute;
+		left: 85%;
+		font-size: 0.875rem;
+		color: #696969;
+}
+.divright[data-v-3556fc04] {
+		margin-top: 0.9375rem;
+		left: 90%;
+		color: white;
+		margin-left: 0.9375rem;
+		font-size: 0.78125rem;
+		width: 0.625rem;
+		height: 0.625rem;
+		background-color: red;
+		border-radius: 50%;
+}
+.title[data-v-3556fc04] {
+		display: flex;
+		font-size: 1.3125rem;
+		font-weight: 550;
+		background-color: #e9e9e9;
+		height: 3.125rem;
+		line-height: 3.125rem;
+}
+.dialogue-body[data-v-3556fc04] {
+		padding: 0.625rem;
+		display: flex;
+		height: 3.125rem;
+		width: 100%;
+		transition: 400ms;
+}
+.dialogue-body>.user-photo[data-v-3556fc04] {
+		width: 3.125rem;
+		height: 3.125rem;
+		border-radius: 0.625rem;
+}
+.dialogue-body[data-v-3556fc04]:hover {
+		background-color: #d2d2d2;
+		transition: 400ms;
+}
+.content[data-v-3556fc04] {
+		margin-left: 0.625rem;
+}
+.content>.con-title[data-v-3556fc04] {
+		font-size: 1rem;
+		color: black;
+}
+.content>.con-record[data-v-3556fc04] {
+		color: #696969;
+		margin-top: 0.625rem;
+		font-size: 0.875rem;
+}

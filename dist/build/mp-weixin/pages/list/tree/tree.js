@@ -1,0 +1,1 @@
+"use strict";const e=require("../../../common/vendor.js"),i={__name:"tree",setup:i=>(i,t)=>({a:e.f(10,((i,t,o)=>({a:i,b:e.o((i=>{setTimeout((()=>{e.index.navigateTo({url:"../../commodity/commodity",animationType:"slide-in-right",animationDuration:200})}),200)}),i)})))})};wx.createPage(i);
