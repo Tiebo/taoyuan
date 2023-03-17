@@ -1,0 +1,17 @@
+<template>
+	<view class="tree-body">
+	</view>
+</template>
+
+<script setup>
+
+</script>
+
+<style scoped>
+	.tree-body {
+		width: 100%;
+		height: 100vh;
+		background: url("https://img.zcool.cn/community/01c4a6554558180000019ae9dc80a2.jpg@1280w_1l_2o_100sh.jpg") center;
+		background-repeat: no-repeat;
+	}
+</style>

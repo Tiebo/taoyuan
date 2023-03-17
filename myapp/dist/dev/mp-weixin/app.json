@@ -1,0 +1,54 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/cart/cart",
+    "pages/message/message",
+    "pages/user/user",
+    "pages/list/tree/tree",
+    "pages/commodity/commodity",
+    "pages/list/hotel/hotel",
+    "pages/list/shop/shop",
+    "pages/list/article/article",
+    "pages/list/articleBody/articleBody",
+    "pages/money/money",
+    "pages/message/dialog/dialog"
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "桃源记",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "position": "bottom",
+    "borderStyle": "black",
+    "selectedColor": "#000000",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "static/icon/home.png",
+        "selectedIconPath": "static/icon/home-copy.png"
+      },
+      {
+        "pagePath": "pages/message/message",
+        "text": "消息",
+        "iconPath": "static/icon/message.png",
+        "selectedIconPath": "static/icon/message-copy.png"
+      },
+      {
+        "pagePath": "pages/cart/cart",
+        "text": "购物车",
+        "iconPath": "static/icon/gouwu.png",
+        "selectedIconPath": "static/icon/gouwu-copy.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的",
+        "iconPath": "static/icon/wode.png",
+        "selectedIconPath": "static/icon/wode-copy.png"
+      }
+    ]
+  },
+  "usingComponents": {}
+}

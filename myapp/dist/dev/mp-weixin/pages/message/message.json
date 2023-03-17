@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "客服",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "uni-icons": "../../uni_modules/uni-icons/components/uni-icons/uni-icons",
+    "uni-list-chat": "../../uni_modules/uni-list/components/uni-list-chat/uni-list-chat"
+  }
+}

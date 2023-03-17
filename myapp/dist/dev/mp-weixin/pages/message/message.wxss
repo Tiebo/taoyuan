@@ -1,0 +1,47 @@
+
+.title-jiahao.data-v-3556fc04 {
+		float: right;
+		font-size: 50rpx;
+		margin-right: 10rpx;
+}
+.msg-body.data-v-3556fc04 {
+		background-color: #f3f3f3;
+}
+.arc-select>label.data-v-3556fc04 {
+		position: absolute;
+		right: 5%;
+		margin-top: 5rpx;
+}
+.arc-select.data-v-3556fc04 {
+		padding: 20rpx;
+}
+.arc-input.data-v-3556fc04 {
+		padding: 10rpx 80rpx 10rpx 20rpx;
+		border-radius: 100rpx;
+		border-color: royalblue;
+		background-color: #ffffff;
+		border-width: 4rpx;
+}
+.setting.data-v-3556fc04 {
+		width: 45rpx;
+		height: 45rpx;
+		float: right;
+		margin-left: 180rpx;
+		margin-top: 25rpx;
+}
+.divright.data-v-3556fc04 {
+		margin-top: 30rpx;
+		left: 90%;
+		color: white;
+		margin-left: 30rpx;
+		font-size: 25rpx;
+		width: 20rpx;
+		height: 20rpx;
+		background-color: red;
+		border-radius: 50%;
+}
+.title.data-v-3556fc04 {
+		font-size: 36rpx;
+		font-weight: 550;
+		padding: 15rpx;
+}

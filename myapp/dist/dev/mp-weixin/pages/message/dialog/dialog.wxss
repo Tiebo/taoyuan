@@ -1,0 +1,195 @@
+
+.order-confirm.data-v-0bfc2430 {
+		margin-top: 20rpx;
+		padding-top: 15rpx;
+		color: #ff6d0c;
+		text-align: center;
+		box-shadow: 0 -2rpx 2rpx rgba(0, 0, 0, 0.1);
+		font-size: 30rpx;
+}
+.order-comm.data-v-0bfc2430 {
+		display: grid;
+		grid-template-columns: 28% 72%;
+		margin-top: 20rpx;
+		font-size: 26rpx;
+		inline-size: 1.3;
+}
+.con-details.data-v-0bfc2430 {
+		padding: 15rpx;
+		margin-left: 10rpx;
+}
+.order-con-title.data-v-0bfc2430 {
+		font-size: 26rpx;
+		color: #666666;
+}
+.order-price.data-v-0bfc2430 {
+		margin-top: 30rpx;
+		font-size: 26rpx;
+		color: #666666;
+}
+.orders.data-v-0bfc2430 {
+		background-color: #ffffff;
+		border-radius: 25rpx;
+		padding: 30rpx 30rpx;
+		max-width: 75%;
+}
+.order-title.data-v-0bfc2430 {
+		font-size: 30rpx;
+		font-weight: 600;
+}
+.order-content.data-v-0bfc2430 {
+		display: flex;
+		margin-top: 30rpx;
+		border-radius: 25rpx;
+		background-color: #ececec;
+}
+.order-content>image.data-v-0bfc2430 {
+		border-radius: 25rpx 0 0 25rpx;
+		width: 150rpx;
+		height: 150rpx;
+}
+.input-box-icon.data-v-0bfc2430 {
+		background-color: #ffffff;
+		padding: 8rpx;
+		margin-left: 15rpx;
+		border-radius: 25rpx;
+}
+.more-icon.data-v-0bfc2430 {
+		color: #ff5500;
+}
+.more-item.data-v-0bfc2430 {
+		background-color: #ffffff;
+		border-radius: 25rpx;
+		padding: 15rpx 25rpx;
+		font-size: 24rpx;
+		margin-right: 20rpx;
+}
+.chat-more.data-v-0bfc2430 {
+		padding: 0rpx 20rpx;
+		position: absolute;
+		bottom: 9vh;
+}
+.chat-box.data-v-0bfc2430 {
+		height: 100vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		background-color: #ececec;
+}
+.chat-list.data-v-0bfc2430 {
+		margin-bottom: 13vh;
+		overflow-y: scroll;
+		padding: 16rpx;
+		-webkit-overflow-scrolling: touch;
+}
+.chat-item-container.data-v-0bfc2430 {
+		display: flex;
+		position: relative;
+		margin-bottom: 20rpx;
+		padding: 12rpx;
+		border-radius: 5rpx;
+		word-break: break-all;
+		line-height: 1.4;
+}
+.content.data-v-0bfc2430 {
+		border-radius: 15rpx;
+		max-width: 70%;
+		padding: 15rpx;
+		font-size: 24rpx;
+		background-color: #fff;
+		box-shadow: 0 1rpx 2rpx rgba(0, 0, 0, 0.1);
+		margin: 0 15rpx;
+}
+.chat-item-container.self.data-v-0bfc2430 {
+		direction: rtl;
+		color: #333;
+		text-align: left;
+}
+.content.cself.data-v-0bfc2430 {
+		direction: rtl;
+		margin-right: 20rpx;
+		background-color: #e9f5fa;
+		color: #333;
+}
+.chat-item-container.data-v-0bfc2430::before {
+		position: absolute;
+		top: 0;
+		left: -8rpx;
+		border-top: 8rpx solid transparent;
+		border-right: 8rpx solid #fff;
+		border-left: none;
+		border-bottom: none;
+}
+.chat-item-container.self.data-v-0bfc2430::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		right: -8rpx;
+		border-top: 8rpx solid transparent;
+		border-left: 8rpx solid #eff6fa;
+		border-right: none;
+		border-bottom: none;
+}
+.avatar.data-v-0bfc2430 {
+		display: table;
+		width: 70rpx;
+		height: 70rpx;
+		margin-right: 10rpx;
+		background-size: contain;
+		border-radius: 50%;
+}
+.nickname.data-v-0bfc2430 {
+		font-size: 22rpx;
+		margin: 10rpx;
+		color: #5c5c5c;
+}
+.input-box.data-v-0bfc2430 {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		position: fixed;
+		bottom: 10rpx;
+		left: 0;
+		width: 100vw;
+		height: 120rpx;
+		z-index: 999;
+}
+.input-wrapper.data-v-0bfc2430 {
+		display: flex;
+		align-items: center;
+		flex-grow: 1;
+		border-radius: 28rpx;
+		background-color: #ffffff;
+		margin: 0 16rpx;
+}
+.input-message.data-v-0bfc2430 {
+		flex-grow: 1;
+		height: 40rpx;
+		margin: 10rpx;
+		border: none;
+		outline: none;
+		background-color: #ffffff;
+		font-size: 28rpx;
+		padding-left: 20rpx;
+}
+.extra.data-v-0bfc2430 {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-right: 10rpx;
+}
+.icon.data-v-0bfc2430 {
+		width: 30rpx;
+		height: 30rpx;
+		margin: 0 10rpx;
+}
+.send-btn.data-v-0bfc2430 {
+		margin-right: 10rpx;
+		padding: 4rpx 20rpx;
+		border: none;
+		outline: none;
+		background-color: #ff5500;
+		color: #fff;
+		font-size: 24rpx;
+		border-radius: 28rpx;
+}

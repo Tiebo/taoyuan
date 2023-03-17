@@ -1,0 +1,23 @@
+{
+  "id": "3912482",
+  "name": "taoyuan",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-ty",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "4478875",
+      "name": "female",
+      "font_class": "female",
+      "unicode": "e765",
+      "unicode_decimal": 59237
+    },
+    {
+      "icon_id": "4478878",
+      "name": "male",
+      "font_class": "male",
+      "unicode": "e768",
+      "unicode_decimal": 59240
+    }
+  ]
+}

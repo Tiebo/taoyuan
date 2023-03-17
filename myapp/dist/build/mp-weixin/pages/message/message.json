@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "uni-list-chat": "../../uni_modules/uni-list/components/uni-list-chat/uni-list-chat"
+  }
+}

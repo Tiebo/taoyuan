@@ -1,0 +1,129 @@
+{
+	"pages": [{
+			"path": "pages/home/home",
+			"style": {
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/cart/cart",
+			"style": {
+				"navigationBarTitleText": "购物车",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/message/message",
+			"style": {
+				"navigationBarTitleText": "客服",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/user/user",
+			"style": {
+				"navigationBarTitleText": "个人中心",
+				"enablePullDownRefresh": true
+			}
+		}, {
+			"path": "pages/list/tree/tree",
+			"style": {
+				"navigationBarTitleText": "领养桃树",
+				"enablePullDownRefresh": true
+			}
+
+		}, {
+			"path": "pages/commodity/commodity",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": true
+			}
+
+		}, {
+			"path": "pages/list/hotel/hotel",
+			"style": {
+				"navigationBarTitleText": "酒店",
+				"enablePullDownRefresh": true
+			}
+
+		}, {
+			"path": "pages/list/shop/shop",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": true
+			}
+
+		}, {
+			"path": "pages/list/article/article",
+			"style": {
+				"navigationBarTitleText": "东新文化",
+				"enablePullDownRefresh": true
+			}
+
+		}, {
+			"path": "pages/list/articleBody/articleBody",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": true
+			}
+
+		}, {
+			"path": "pages/money/money",
+			"style": {
+				"navigationBarTitleText": "钱包",
+				"enablePullDownRefresh": true
+			}
+
+		}, {
+			"path": "pages/message/dialog/dialog",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": true
+			}
+
+		}
+	],
+	"style": {
+		"app-plus": {
+			"animationType": "fade-in",
+			"animationDuration": 300
+		}
+	},
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "桃源记",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+
+	"tabBar": {
+		"position": "bottom",
+		"borderStyle": "black",
+		"selectedColor": "#000000",
+		"list": [{
+				"pagePath": "pages/home/home",
+				"text": "首页",
+				"iconPath": "static/icon/home.png",
+				"selectedIconPath": "static/icon/home-copy.png"
+			},
+			{
+				"pagePath": "pages/message/message",
+				"text": "消息",
+				"iconPath": "static/icon/message.png",
+				"selectedIconPath": "static/icon/message-copy.png"
+			},
+			{
+				"pagePath": "pages/cart/cart",
+				"text": "购物车",
+				"iconPath": "static/icon/gouwu.png",
+				"selectedIconPath": "static/icon/gouwu-copy.png"
+			},
+			{
+				"pagePath": "pages/user/user",
+				"text": "我的",
+				"iconPath": "static/icon/wode.png",
+				"selectedIconPath": "static/icon/wode-copy.png"
+			}
+		]
+	}
+}

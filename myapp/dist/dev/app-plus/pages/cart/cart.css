@@ -1,0 +1,132 @@
+
+.card {
+		padding-bottom: 3.125rem;
+}
+.card .checkbox {
+		transform: scale(0.7)
+}
+.address-bar {
+		padding: 0.625rem;
+}
+.address-bar uni-button {
+		border: 0.03125rem solid $dominant-color;
+		background: #FFFFFF;
+		color: $dominant-color;
+}
+.section {
+		background: #FFFFFF;
+}
+.section .item {
+		padding: 0.625rem;
+		display: flex;
+		border-bottom: 1px solid #EEEEEE;
+}
+.section .cover {
+		width: 6.25rem;
+		height: 6.25rem;
+}
+.section .info {
+		flex: 1;
+		padding-left: 0.625rem;
+		box-sizing: border-box;
+		overflow: hidden;
+}
+.section .title {
+		font-size: 1.0625rem;
+}
+.section .title,
+	.vender .list .describe {
+		width: 100%;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+}
+.section .describe {
+		margin-top: 0.625rem;
+		font-size: 0.75rem;
+		color: #999999;
+}
+.section .price {
+		color: $dominant-color;
+		font-size: 0.75rem;
+}
+.section .price .num {
+		padding: 0 0.125rem;
+		font-size: 1.25rem;
+}
+.section .level-box {
+		margin-top: 0.625rem;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+}
+.section .level-box .key {
+		font-size: 0.75rem;
+		color: #999999;
+}
+.section .level-box .num-wrap {
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+}
+.section .level-box .icon-box {
+		width: 1.875rem;
+		height: 1.875rem;
+		border: 1px solid #DDDDDD;
+		background: #f7f7f7;
+}
+.section .level-box .icon-box .gray {
+		color: #CCCCCC;
+}
+.section .level-box .icon-box .gray3 {
+		color: #333333;
+}
+.section .level-box .text-wrap {
+		margin: 0 0.125rem;
+		height: 1.875rem;
+		border: 1px solid #DDDDDD;
+		background: #f7f7f7;
+}
+.section .level-box .text-wrap uni-input {
+		padding: 0 0.3125rem;
+		height: 1.875rem;
+		line-height: 1.875rem;
+		width: 2.5rem;
+		font-size: 0.75rem;
+		text-align: center;
+}
+.bottom-btns {
+		position: fixed;
+		padding: 0 0 0 0.625rem;
+		box-sizing: border-box;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height: 2.8125rem;
+		right: 0;
+		left: 0;
+		box-shadow: 0 -0.0625rem 0.25rem rgba(0, 0, 0, .1);
+		background: #FFFFFF;
+		z-index: 99;
+}
+.bottom-btns .delete-btn {
+		margin: 0;
+		padding: 0 0.9375rem;
+		height: 2.1875rem;
+		line-height: 2.1875rem;
+		border-radius: 1.09375rem;
+		background: $dominant-color;
+		font-size: 0.9375rem;
+}
+.bottom-btns .buy-btn {
+		margin: 0;
+		padding: 0 1.875rem;
+		height: 2.8125rem;
+		line-height: 2.8125rem;
+		border-radius: 0;
+		background: $dominant-color;
+		font-size: 0.9375rem;
+}
+.bottom-btns .price {
+		color: $dominant-color;
+}
