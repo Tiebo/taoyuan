@@ -15,7 +15,7 @@
 							请核对订单信息
 						</view>
 						<view class="order-content">
-							<image src="../../../static/icon/taozi.png"></image>
+							<image src="https://i.328888.xyz/2023/02/25/EfCJy.jpeg"></image>
 							<view class="con-details">
 								<view class="order-con-title">
 									{{message.details_title}}
@@ -69,10 +69,13 @@
 	import {
 		ref
 	} from 'vue';
+	import {
+		useUserStore
+	} from '../../../stores/user';
 	export default {
 		onLoad: function() {
 			uni.setNavigationBarTitle({
-				title: `${'店名'}`
+				title: `${'桃源记苗木基地'}`
 			})
 		},
 		setup() {
@@ -80,7 +83,7 @@
 			let is_confirm = ref(false);
 			let messages = ref([{
 					avatarUrl: 'https://cdn.acwing.com/media/user/profile/photo/187693_md_babb9c1d86.jpg',
-					nickname: '客服机器人',
+					nickname: '桃源记苗木基地',
 					from: 'other',
 					type: "orders",
 					name: "柏西摩",
@@ -91,24 +94,18 @@
 					address_provinces: "四川省成都市",
 					address_county: "成华区",
 					address_details: "保和街道 金马河路99号弘创名座物业办公室"
-				}, {
-					type: "msg",
-					avatarUrl: 'https://cdn.acwing.com/media/user/profile/photo/187693_md_babb9c1d86.jpg',
-					nickname: '客服机器人',
-					content: '好的呢，亲亲谢谢您的理解，您放心咱们一定灰给您解决问题的',
-					from: 'other'
 				},
 				{
 					type: "msg",
-					avatarUrl: '../../../static/photo.png',
-					nickname: '客服机器人',
-					content: '好的呢',
+					avatarUrl: useUserStore().user_photo,
+					nickname: '桃源记苗木基地',
+					content: '好的',
 					from: 'self'
 				}, {
 					type: "msg",
 					avatarUrl: 'https://cdn.acwing.com/media/user/profile/photo/187693_md_babb9c1d86.jpg',
-					nickname: '客服机器人',
-					content: '好的呢',
+					nickname: '桃源记苗木基地',
+					content: '好的呢亲',
 					from: 'other'
 				}
 			])
@@ -251,7 +248,7 @@
 		border-radius: 15rpx;
 		max-width: 70%;
 		padding: 15rpx;
-		font-size: 24rpx;
+		font-size: 27rpx;
 		background-color: #fff;
 		box-shadow: 0 1rpx 2rpx rgba(0, 0, 0, 0.1);
 		margin: 0 15rpx;

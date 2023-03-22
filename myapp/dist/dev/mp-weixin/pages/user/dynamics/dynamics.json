@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "动态",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "dynamics-card": "../../../components/dynamics-card/dynamics-card"
+  }
+}

@@ -52,8 +52,7 @@
 		background-color: #f3f3f3;
 }
 .arc-select.data-v-d771b9bd {
-		background-color: #ffffff;
-		padding: 20rpx;
+		padding: 20rpx 20rpx 0 20rpx;
 }
 .arc-input.data-v-d771b9bd {
 		padding: 10rpx 80rpx 10rpx 20rpx;
@@ -61,7 +60,7 @@
 		border-radius: 100rpx;
 		border-color: royalblue;
 		background-color: #ffffff;
-		border-width: 4rpx;
+		border-width: 3rpx;
 }
 label.data-v-d771b9bd {
 		position: absolute;

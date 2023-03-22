@@ -1,9 +1,10 @@
 "use strict";
 const common_vendor = require("../../../common/vendor.js");
+const stores_user = require("../../../stores/user.js");
 const _sfc_main = {
   onLoad: function() {
     common_vendor.index.setNavigationBarTitle({
-      title: `${"\u5E97\u540D"}`
+      title: `${"\u6843\u6E90\u8BB0\u82D7\u6728\u57FA\u5730"}`
     });
   },
   setup() {
@@ -12,7 +13,7 @@ const _sfc_main = {
     let messages = common_vendor.ref([
       {
         avatarUrl: "https://cdn.acwing.com/media/user/profile/photo/187693_md_babb9c1d86.jpg",
-        nickname: "\u5BA2\u670D\u673A\u5668\u4EBA",
+        nickname: "\u6843\u6E90\u8BB0\u82D7\u6728\u57FA\u5730",
         from: "other",
         type: "orders",
         name: "\u67CF\u897F\u6469",
@@ -26,23 +27,16 @@ const _sfc_main = {
       },
       {
         type: "msg",
-        avatarUrl: "https://cdn.acwing.com/media/user/profile/photo/187693_md_babb9c1d86.jpg",
-        nickname: "\u5BA2\u670D\u673A\u5668\u4EBA",
-        content: "\u597D\u7684\u5462\uFF0C\u4EB2\u4EB2\u8C22\u8C22\u60A8\u7684\u7406\u89E3\uFF0C\u60A8\u653E\u5FC3\u54B1\u4EEC\u4E00\u5B9A\u7070\u7ED9\u60A8\u89E3\u51B3\u95EE\u9898\u7684",
-        from: "other"
-      },
-      {
-        type: "msg",
-        avatarUrl: "../../../static/photo.png",
-        nickname: "\u5BA2\u670D\u673A\u5668\u4EBA",
-        content: "\u597D\u7684\u5462",
+        avatarUrl: stores_user.useUserStore().user_photo,
+        nickname: "\u6843\u6E90\u8BB0\u82D7\u6728\u57FA\u5730",
+        content: "\u597D\u7684",
         from: "self"
       },
       {
         type: "msg",
         avatarUrl: "https://cdn.acwing.com/media/user/profile/photo/187693_md_babb9c1d86.jpg",
-        nickname: "\u5BA2\u670D\u673A\u5668\u4EBA",
-        content: "\u597D\u7684\u5462",
+        nickname: "\u6843\u6E90\u8BB0\u82D7\u6728\u57FA\u5730",
+        content: "\u597D\u7684\u5462\u4EB2",
         from: "other"
       }
     ]);

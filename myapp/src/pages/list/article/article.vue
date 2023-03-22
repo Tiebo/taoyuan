@@ -12,14 +12,14 @@
 			</view>
 			<view class="arc-user">
 				<view class="arc-user-photo">
-					<image :src="a.author_photo" mode="aspectFit"></image>
+					<image :src="userStore.user_photo" mode="aspectFit"></image>
 				</view>
 				<view class="arc-user-name">
 					{{a.author}}
 				</view>
 			</view>
 			<view class="arc-des">
-				{{a.article_des}}
+				{{a.articleDes}}
 			</view>
 			<view v-if="true" class="arc-image">
 			</view>
@@ -34,15 +34,17 @@
 		ref
 	} from 'vue';
 	import {
+		useUserStore
+	} from '../../../stores/user';
+	import {
 		re_get
 	} from '../../../utils/request';
 	let article_list = ref([])
-
+	const userStore = useUserStore()
 	const getData = async () => {
-		await re_get("http://127.0.0.1:8000/api/article/list/", {}).then(res => {
-			article_list.value = res.data.articles
-		})
-	};
+		let resp = await re_get("/api/article/list/", {})
+		article_list.value = resp.data.articles
+	}
 	getData()
 	const router_article_body = (id) => {
 		setTimeout(() => {
@@ -119,8 +121,7 @@
 	}
 
 	.arc-select {
-		background-color: #ffffff;
-		padding: 20rpx;
+		padding: 20rpx 20rpx 0 20rpx;
 	}
 
 	.arc-input {
@@ -129,7 +130,7 @@
 		border-radius: 100rpx;
 		border-color: royalblue;
 		background-color: #ffffff;
-		border-width: 4rpx;
+		border-width: 3rpx;
 	}
 
 	label {

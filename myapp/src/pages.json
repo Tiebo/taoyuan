@@ -1,84 +1,123 @@
 {
 	"pages": [{
+			"path": "pages/login/index",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/login/login",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+		}, {
 			"path": "pages/home/home",
 			"style": {
-				"enablePullDownRefresh": true
+				"enablePullDownRefresh": false
 			}
 		},
 		{
 			"path": "pages/cart/cart",
 			"style": {
 				"navigationBarTitleText": "购物车",
-				"enablePullDownRefresh": true
+				"enablePullDownRefresh": false
 			}
 		},
 		{
 			"path": "pages/message/message",
 			"style": {
 				"navigationBarTitleText": "客服",
-				"enablePullDownRefresh": true
+				"enablePullDownRefresh": false
 			}
 		},
 		{
 			"path": "pages/user/user",
 			"style": {
 				"navigationBarTitleText": "个人中心",
-				"enablePullDownRefresh": true
+				"enablePullDownRefresh": false
 			}
 		}, {
 			"path": "pages/list/tree/tree",
 			"style": {
 				"navigationBarTitleText": "领养桃树",
-				"enablePullDownRefresh": true
+				"enablePullDownRefresh": false
 			}
 
 		}, {
 			"path": "pages/commodity/commodity",
 			"style": {
 				"navigationBarTitleText": "",
-				"enablePullDownRefresh": true
+				"enablePullDownRefresh": false
 			}
-
 		}, {
 			"path": "pages/list/hotel/hotel",
 			"style": {
 				"navigationBarTitleText": "酒店",
-				"enablePullDownRefresh": true
+				"enablePullDownRefresh": false
 			}
 
 		}, {
 			"path": "pages/list/shop/shop",
 			"style": {
 				"navigationBarTitleText": "",
-				"enablePullDownRefresh": true
+				"enablePullDownRefresh": false
 			}
 
 		}, {
 			"path": "pages/list/article/article",
 			"style": {
 				"navigationBarTitleText": "东新文化",
-				"enablePullDownRefresh": true
+				"enablePullDownRefresh": false
 			}
 
 		}, {
 			"path": "pages/list/articleBody/articleBody",
 			"style": {
 				"navigationBarTitleText": "",
-				"enablePullDownRefresh": true
+				"enablePullDownRefresh": false
 			}
 
 		}, {
 			"path": "pages/money/money",
 			"style": {
 				"navigationBarTitleText": "钱包",
-				"enablePullDownRefresh": true
+				"enablePullDownRefresh": false
 			}
 
 		}, {
 			"path": "pages/message/dialog/dialog",
 			"style": {
 				"navigationBarTitleText": "",
-				"enablePullDownRefresh": true
+				"enablePullDownRefresh": false
+			}
+		}, {
+			"path": "pages/login/register",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/list/arboriculture/arboriculture",
+			"style": {
+				"navigationBarTitleText": "养护桃树",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/user/dynamics/dynamics",
+			"style": {
+				"navigationBarTitleText": "动态",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/user/expressage/expressage",
+			"style": {
+				"navigationBarTitleText": "快递",
+				"enablePullDownRefresh": false
 			}
 
 		}

@@ -4,3 +4,7 @@
 	background-color: #e6e6e6;
 	opacity: 0.5;
 }
+
+body::-webkit-scrollbar {
+	display: none;
+}

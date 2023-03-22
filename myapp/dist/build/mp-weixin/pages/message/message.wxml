@@ -1,1 +1,0 @@
-<view class="title data-v-d94caf12">   消息 <label class="data-v-d94caf12" style="width:400rpx"></label><image class="setting data-v-d94caf12" src="/static/icon/setting.png"/></view><view class="dialogue data-v-d94caf12"><uni-list-chat wx:for="{{a}}" wx:for-item="i" class="data-v-d94caf12" u-i="{{i.a}}" bind:__l="__l" u-p="{{i.b}}"></uni-list-chat></view>

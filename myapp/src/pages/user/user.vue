@@ -1,16 +1,16 @@
 <template>
 	<view class="con-body">
 		<view class="user-info">
-			<image class="user-photo" src="../../static/photo.png"></image>
+			<image class="user-photo" :src="userStore.user_photo"></image>
 			<view class="username">
-				豪爽的僵尸
+				{{userStore.name}}
 				<view style="font-size: 20rpx; color: grey;margin-top: 20rpx;">
-					ID:{{userId}}
+					ID:{{userStore.uid}}
 				</view>
 			</view>
-			<view class="user-tag" @click="router_money">
-				<text class="iconfont icon-tyqianbao"></text>
-				钱包
+			<view class="user-tag" @click="router_to('../login/index')">
+				<text class="iconfont icon-tylogout"></text>
+				<text @click="logout">退出</text>
 			</view>
 		</view>
 		<view class="con-content">
@@ -51,121 +51,78 @@
 				</view>
 			</view>
 		</view>
-		<view class="con-content">
-
-			<view class="user-info-data-row">
-				<view class="data-col">
-					0
-					<view style="font-size: 24rpx; color: gray; font-weight: 500;">
-						获赞
-					</view>
-				</view>
-				<view class="data-col">
-					0
-					<view style="font-size: 24rpx; color: gray; font-weight: 500;">
-						关注
-					</view>
-				</view>
-				<view class="data-col">
-					0
-					<view style="font-size: 24rpx; color: gray; font-weight: 500;">
-						访客
-					</view>
-				</view>
-				<view class="data-col">
-					0
-					<view style="font-size: 24rpx; color: gray; font-weight: 500;">
-						粉丝
-					</view>
-				</view>
+		<view class="feature">
+			<view class="list" @click="router_to('./dynamics/dynamics')">
+				<image src="../../static/icon/dongtai.png"></image>
+				<br>
+				<span style="font-size: 24rpx;">广场</span>
 			</view>
-			<view class="user-space">
-				动态
+			<view class="list" @click="router_to('/pages/list/arboriculture/arboriculture')">
+				<image src="../../static/icon/jiaoshui.png"></image>
+				<br>
+				<span style="font-size: 24rpx;">桃农场</span>
 			</view>
-			<view class="space" v-for="i in 2" :key="i">
-				<uni-section title="卡片封面图+操作栏" type="line">
-					<uni-card>
-						<image mode="aspectFill" style="width: 100%; height: 300rpx;"
-							src="https://i.328888.xyz/2023/02/22/xbZvF.jpeg">
-						</image>
-						<hr>
-						<text>今天天气好好呀，想要出去晒太阳</text>
-						<template v-slot:actions>
-							<view class="card-actions row">
-								<view class="card-actions-item" @click="actionsClick('分享')">
-									<uni-icons type="redo" size="18" color="#999"></uni-icons>
-									<text class="card-actions-item-text">分享</text>
-								</view>
-								<view class="card-actions-item" @click="actionsClick('点赞')">
-									<uni-icons type="heart" size="18" color="#999"></uni-icons>
-									<text class="card-actions-item-text">点赞</text>
-								</view>
-								<view class="card-actions-item" @click="actionsClick('评论')">
-									<uni-icons type="chatbubble" size="18" color="#999"></uni-icons>
-									<text class="card-actions-item-text">评论</text>
-								</view>
-							</view>
-						</template>
-					</uni-card>
-				</uni-section>
+			<view class="list">
+				<image src="../../static/icon/gushi.png"></image>
+				<br>
+				<span style="font-size: 24rpx;">我的故事</span>
+			</view>
+			<view class="list" @click="router_to('./expressage/expressage')">
+				<image src="../../static/icon/kuaidi.png"></image>
+				<br>
+				<span style="font-size: 24rpx;">我的快递</span>
 			</view>
 		</view>
+		<view class="dynamic" v-for="i in 3" :key="i">
+			<dynamics-card :user='user_info' :post="post_info">
+			</dynamics-card>
+		</view>
 	</view>
+
 </template>
 
 <script setup>
 	import {
+		reactive,
 		ref
 	} from 'vue';
-	let userId = ref('125742');
-	const router_money = () => {
-		setTimeout(() => {
-			uni.navigateTo({
-				url: '../money/money',
-				animationType: 'slide-in-right',
-				animationDuration: 200
-			});
-		}, 200)
-	}
+	import {
+		useUserStore
+	} from '../../stores/user.js';
+	import {
+		router_to
+	} from '../../utils/utils.js'
 
-	const actionsClick = (text) => {
-		uni.showToast({
-			title: text,
-			icon: 'none'
-		})
+	const userStore = useUserStore()
+
+	let user_info = reactive({
+		uid: '125742',
+		username: '晞月',
+		subtitle: '哈哈哈',
+		user_photo: userStore.user_photo,
+	})
+
+	function logout() {
+		router_to('pages/login/index')
+		uni.removeStorageSync("token");
 	}
+	let post_info = reactive({
+		content: '惊喜，偶然间找到的一张好好看的背景',
+		time: '2-7',
+		images: [],
+		like: 2,
+		comment: 3
+	});
+	post_info.images.push('https://c-ssl.duitang.com/uploads/blog/202009/28/20200928000810_5ad65.jpeg')
 </script>
 
 <style scoped>
-	.order-title {
-		font-weight: 600;
-		font-size: 30rpx;
-		margin: 0 0 20rpx 20rpx;
-	}
-
-	.row {
-		display: grid;
-		grid-template-columns: repeat(3, 33%);
-		text-align: center;
+	/deep/.dynamic-card {
 		margin-bottom: 20rpx;
 	}
 
-	.gender {
-		width: 25rpx;
-		height: 25rpx;
-	}
-
-	.user-space {
-		margin-top: 30rpx;
-		margin-left: 20rpx;
-		font-size: 36rpx;
-		font-weight: 600;
-	}
-
-	.user-info-data-row>.data-col {
-		text-align: center;
+	.dynamic {
 		margin-top: 20rpx;
-		font-weight: 600;
 	}
 
 	.data-col>.order-item {
@@ -176,7 +133,7 @@
 	.con-content {
 		margin-top: 30rpx;
 		background-color: #ffffff;
-		border-radius: 40rpx 40rpx 0 0;
+		border-radius: 30rpx;
 		padding: 20rpx;
 	}
 
@@ -191,9 +148,43 @@
 		font-weight: 600;
 	}
 
-	.user-info-data-row {
+	.list {
+		border-radius: 30rpx;
+		background-color: white;
+		transition: 100ms;
+	}
+
+	.list>image {
+		width: 50rpx;
+		height: 50rpx;
+	}
+
+	.feature {
+		margin-top: 20rpx;
+		text-align: center;
+		padding: 30rpx;
+		border-radius: 20rpx;
+		background-color: #ffffff;
 		display: grid;
 		grid-template-columns: repeat(4, 25%);
+	}
+
+	.order-title {
+		font-weight: 600;
+		font-size: 30rpx;
+		margin: 20rpx;
+	}
+
+	.row {
+		display: grid;
+		grid-template-columns: repeat(3, 33%);
+		text-align: center;
+		margin-bottom: 20rpx;
+	}
+
+	.gender {
+		width: 25rpx;
+		height: 25rpx;
 	}
 
 	.username {
@@ -214,17 +205,20 @@
 	}
 
 	.con-body {
-		background-color: rgba(221, 219, 214, 0.8);
+		background: rgb(240, 206, 197);
+		background: linear-gradient(180deg, rgba(240, 206, 197, 1) 0%, rgba(245, 231, 228, 1) 16%, rgba(240, 232, 230, 1) 100%);
 		padding: 0 20rpx;
 	}
 
 	.user-tag {
+		position: absolute;
+		right: 5%;
+		top: 7%;
+		font-size: 24rpx;
 		border: 2rpx transparent solid;
 		border-color: #0d0d0d;
-		text-align: center;
-		margin: 40rpx;
+		height: 40rpx;
 		color: #0d0d0d;
-		height: 50rpx;
 		padding: 5rpx 10rpx;
 		border-radius: 30rpx;
 		transition: all 200ms;

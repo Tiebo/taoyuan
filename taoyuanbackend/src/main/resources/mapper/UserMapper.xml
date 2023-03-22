@@ -2,9 +2,9 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.yybackend.mapper.UserMapper">
+<mapper namespace="com.taoyuanbackend.mapper.UserMapper">
 
-    <resultMap id="BaseResultMap" type="com.yybackend.pojo.User">
+    <resultMap id="BaseResultMap" type="com.taoyuanbackend.pojo.User">
             <id property="id" column="id" jdbcType="INTEGER"/>
             <result property="username" column="user_username" jdbcType="VARCHAR"/>
             <result property="age" column="user_age" jdbcType="INTEGER"/>

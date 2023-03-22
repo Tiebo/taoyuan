@@ -50,7 +50,10 @@
     "@dcloudio/uni-quickapp-webview": "3.0.0-3061320221209001",
     "@escook/request-miniprogram": "^0.2.1",
     "@vant/weapp": "^1.10.12",
+    "mockjs": "^1.1.0",
+    "pinia": "^2.0.33",
     "sass": "^1.57.0",
+    "vant-weapp": "^0.5.29",
     "vue": "^3.2.45",
     "vue-i18n": "^9.1.9"
   },
@@ -59,7 +62,7 @@
     "@dcloudio/uni-automator": "3.0.0-3061320221209001",
     "@dcloudio/uni-cli-shared": "3.0.0-3061320221209001",
     "@dcloudio/uni-stacktracey": "3.0.0-3061320221209001",
-    "@dcloudio/vite-plugin-uni": "3.0.0-3061320221209001",
+    "@dcloudio/vite-plugin-uni": "^3.0.0-3061320221209001",
     "sass-loader": "^10.1.1",
     "vite": "^3.2.4"
   }

@@ -1,5 +1,6 @@
 "use strict";
 const common_vendor = require("../../../common/vendor.js");
+const stores_user = require("../../../stores/user.js");
 const utils_request = require("../../../utils/request.js");
 if (!Array) {
   const _easycom_uni_icons2 = common_vendor.resolveComponent("uni-icons");
@@ -13,10 +14,10 @@ const _sfc_main = {
   __name: "article",
   setup(__props) {
     let article_list = common_vendor.ref([]);
+    const userStore = stores_user.useUserStore();
     const getData = async () => {
-      await utils_request.re_get("http://127.0.0.1:8000/api/article/list/", {}).then((res) => {
-        article_list.value = res.data.articles;
-      });
+      let resp = await utils_request.re_get("/api/article/list/", {});
+      article_list.value = resp.data.articles;
     };
     getData();
     const router_article_body = (id) => {
@@ -37,17 +38,17 @@ const _sfc_main = {
         b: common_vendor.f(common_vendor.unref(article_list), (a, k0, i0) => {
           return common_vendor.e({
             a: common_vendor.t(a.title),
-            b: a.author_photo,
-            c: common_vendor.t(a.author),
-            d: common_vendor.t(a.article_des)
+            b: common_vendor.t(a.author),
+            c: common_vendor.t(a.articleDes)
           }, {}, {
-            e: a.id,
-            f: common_vendor.o(($event) => router_article_body(a.id), a.id)
+            d: a.id,
+            e: common_vendor.o(($event) => router_article_body(a.id), a.id)
           });
         }),
-        c: common_vendor.t(34),
-        d: common_vendor.t(11),
-        e: common_vendor.t(11)
+        c: common_vendor.unref(userStore).user_photo,
+        d: common_vendor.t(34),
+        e: common_vendor.t(11),
+        f: common_vendor.t(11)
       };
     };
   }

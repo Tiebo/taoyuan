@@ -1,0 +1,1 @@
+<view class="container data-v-b2b743c1"><view wx:for="{{a}}" wx:for-item="post" wx:key="c" class="dynamic-card data-v-b2b743c1"><dynamics-card wx:if="{{post.b}}" class="dynamic-card-body data-v-b2b743c1" u-i="{{post.a}}" bind:__l="__l" u-p="{{post.b}}"></dynamics-card></view></view>

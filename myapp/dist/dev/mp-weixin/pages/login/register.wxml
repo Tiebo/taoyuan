@@ -1,0 +1,1 @@
+<uni-file-picker wx:if="{{f}}" bindselect="{{a}}" bindprogress="{{b}}" bindsuccess="{{c}}" bindfail="{{d}}" u-i="94937e2e-0" bind:__l="__l" bindupdateModelValue="{{e}}" u-p="{{f}}"/>

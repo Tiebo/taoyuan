@@ -44,11 +44,10 @@
 		}, 200)
 	}
 	const getData = async () => {
-		await re_get("http://127.0.0.1:8000/api/commodity/all/", {
+		let resp = await re_get("/api/commodity/all/", {
 			"type": 1
-		}).then(res => {
-			tree_data.value = res.data.resp;
-		})
+		}, uni.getStorageSync("token"))
+		tree_data.value = resp;
 	};
 	getData();
 </script>

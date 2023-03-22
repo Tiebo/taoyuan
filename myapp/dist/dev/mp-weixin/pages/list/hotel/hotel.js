@@ -16,11 +16,10 @@ const _sfc_main = {
       }, 200);
     };
     const getData = async () => {
-      await utils_request.re_get("http://127.0.0.1:8000/api/commodity/all/", {
+      let resp = await utils_request.re_get("/api/commodity/all/", {
         "type": 2
-      }).then((res) => {
-        tree_data.value = res.data.resp;
-      });
+      }, common_vendor.index.getStorageSync("token"));
+      tree_data.value = resp;
     };
     getData();
     return (_ctx, _cache) => {

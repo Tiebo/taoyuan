@@ -26,10 +26,10 @@ const _sfc_main = {
       utils_utils.router_to("./dialog/dialog");
     };
     const getData = () => {
-      msg_date.value.push("2-17");
-      msg_date.value.push("2-15");
-      msg_date.value.push("2-13");
-      msg_date.value.push("2-11");
+      msg_date.value.push("2-17 15:32");
+      msg_date.value.push("2-15 11:02");
+      msg_date.value.push("2-13 17:14");
+      msg_date.value.push("2-11 9:38");
     };
     getData();
     return (_ctx, _cache) => {
@@ -42,7 +42,7 @@ const _sfc_main = {
         c: common_vendor.p({
           clickable: true,
           ["avatar-circle"]: true,
-          title: "\u5BA2\u670D",
+          title: "\u6843\u6E90\u8BB0\u82D7\u6728\u57FA\u5730\u5BA2\u670D",
           avatar: "https://cdn.acwing.com/media/user/profile/photo/187693_md_babb9c1d86.jpg",
           note: "\u60A8\u6536\u5230\u4E00\u6761\u65B0\u7684\u6D88\u606F",
           time: common_vendor.unref(msg_date)[0],
@@ -52,8 +52,8 @@ const _sfc_main = {
         e: common_vendor.p({
           clickable: true,
           ["avatar-circle"]: true,
-          title: "\u75DB\u82E6\u88E4\u5B50",
-          avatar: "https://cdn.acwing.com/media/user/profile/photo/63655_lg_3be53c9a42.jpg",
+          title: "\u82B1\u6EE1\u8E4A\u5BA2\u670D",
+          avatar: "https://i.328888.xyz/2023/02/25/E0zG3.jpeg",
           note: "\u60A8\u6536\u5230\u4E00\u6761\u65B0\u7684\u6D88\u606F",
           time: common_vendor.unref(msg_date)[1],
           ["badge-text"]: 4
@@ -62,8 +62,8 @@ const _sfc_main = {
         g: common_vendor.p({
           clickable: true,
           ["avatar-circle"]: true,
-          title: "\u6124\u6012\u8611\u83C7",
-          avatar: "https://cdn.acwing.com/media/user/profile/photo/128261_md_ce1413e135.jpg",
+          title: "\u660E\u7166\u5C45\u5BA2\u670D",
+          avatar: "https://i.328888.xyz/2023/02/25/E0Ono.jpeg",
           note: "\u60A8\u6536\u5230\u4E00\u6761\u65B0\u7684\u6D88\u606F",
           time: common_vendor.unref(msg_date)[2],
           ["badge-text"]: 0
@@ -72,8 +72,8 @@ const _sfc_main = {
         i: common_vendor.p({
           clickable: true,
           ["avatar-circle"]: true,
-          title: "\u7F9A\u7F8A\u7CD5\u70B9\u62CC\u996D",
-          avatar: "https://cdn.acwing.com/media/user/profile/photo/246956_lg_c63d10ee56.jpg",
+          title: "\u98CE\u96E8\u96C6\u5BA2\u670D",
+          avatar: "https://i.328888.xyz/2023/02/25/E0rFq.jpeg",
           note: "\u60A8\u6536\u5230\u4E00\u6761\u65B0\u7684\u6D88\u606F",
           time: common_vendor.unref(msg_date)[3],
           ["badge-text"]: 0

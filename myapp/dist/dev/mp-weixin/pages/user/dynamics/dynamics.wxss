@@ -1,0 +1,9 @@
+
+.container.data-v-b2b743c1 {
+		padding: 10rpx 20rpx;
+		background-color: #ededed;
+		height: 100vh;
+}
+.dynamic-card.data-v-b2b743c1 {
+		margin-bottom: 20rpx;
+}

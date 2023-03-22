@@ -1,6 +1,0 @@
-{
-  "usingComponents": {
-    "uni-icons": "../../uni_modules/uni-icons/components/uni-icons/uni-icons",
-    "uni-card": "../../uni_modules/uni-card/components/uni-card/uni-card"
-  }
-}

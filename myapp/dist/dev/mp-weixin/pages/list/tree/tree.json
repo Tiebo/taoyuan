@@ -1,5 +1,5 @@
 {
   "navigationBarTitleText": "领养桃树",
-  "enablePullDownRefresh": true,
+  "enablePullDownRefresh": false,
   "usingComponents": {}
 }

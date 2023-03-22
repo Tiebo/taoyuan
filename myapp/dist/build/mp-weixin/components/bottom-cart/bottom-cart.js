@@ -1,1 +1,0 @@
-"use strict";const e=require("../../common/vendor.js"),t={};if(!Array){e.resolveComponent("uni-icons")()}Math;const n=e._export_sfc(t,[["render",function(t,n){return{a:e.p({type:"shop",size:"25"}),b:e.p({type:"chatbubble-filled",size:"25"}),c:e.p({type:"star",size:"25"})}}]]);wx.createComponent(n);

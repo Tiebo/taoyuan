@@ -95,7 +95,7 @@
 		border-radius: 15rpx;
 		max-width: 70%;
 		padding: 15rpx;
-		font-size: 24rpx;
+		font-size: 27rpx;
 		background-color: #fff;
 		box-shadow: 0 1rpx 2rpx rgba(0, 0, 0, 0.1);
 		margin: 0 15rpx;

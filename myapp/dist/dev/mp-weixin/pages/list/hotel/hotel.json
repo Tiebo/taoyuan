@@ -1,5 +1,5 @@
 {
   "navigationBarTitleText": "酒店",
-  "enablePullDownRefresh": true,
+  "enablePullDownRefresh": false,
   "usingComponents": {}
 }

@@ -7,18 +7,18 @@
 			<input name="input" class="arc-input" type="text" placeholder="搜索">
 		</view>
 		<view class="dialogue">
-			<uni-list-chat :clickable="true" :avatar-circle="true" title="客服"
+			<uni-list-chat :clickable="true" :avatar-circle="true" title="桃源记苗木基地客服"
 				avatar="https://cdn.acwing.com/media/user/profile/photo/187693_md_babb9c1d86.jpg" note="您收到一条新的消息"
 				:time="msg_date[0]" :badge-text="2" @click="router_dialog"></uni-list-chat>
-			<uni-list-chat :clickable="true" :avatar-circle="true" title="痛苦裤子"
-				avatar="https://cdn.acwing.com/media/user/profile/photo/63655_lg_3be53c9a42.jpg" note="您收到一条新的消息"
-				:time="msg_date[1]" :badge-text="4" @click="router_dialog"></uni-list-chat>
-			<uni-list-chat :clickable="true" :avatar-circle="true" title="愤怒蘑菇"
-				avatar="https://cdn.acwing.com/media/user/profile/photo/128261_md_ce1413e135.jpg" note="您收到一条新的消息"
-				:time="msg_date[2]" :badge-text="0" @click="router_dialog"></uni-list-chat>
-			<uni-list-chat :clickable="true" :avatar-circle="true" title="羚羊糕点拌饭"
-				avatar="https://cdn.acwing.com/media/user/profile/photo/246956_lg_c63d10ee56.jpg" note="您收到一条新的消息"
-				:time="msg_date[3]" :badge-text="0" @click="router_dialog"></uni-list-chat>
+			<uni-list-chat :clickable="true" :avatar-circle="true" title="花满蹊客服"
+				avatar="https://i.328888.xyz/2023/02/25/E0zG3.jpeg" note="您收到一条新的消息" :time="msg_date[1]" :badge-text="4"
+				@click="router_dialog"></uni-list-chat>
+			<uni-list-chat :clickable="true" :avatar-circle="true" title="明煦居客服"
+				avatar="https://i.328888.xyz/2023/02/25/E0Ono.jpeg" note="您收到一条新的消息" :time="msg_date[2]" :badge-text="0"
+				@click="router_dialog"></uni-list-chat>
+			<uni-list-chat :clickable="true" :avatar-circle="true" title="风雨集客服"
+				avatar="https://i.328888.xyz/2023/02/25/E0rFq.jpeg" note="您收到一条新的消息" :time="msg_date[3]" :badge-text="0"
+				@click="router_dialog"></uni-list-chat>
 		</view>
 	</view>
 </template>
@@ -43,10 +43,10 @@
 		router_to('./dialog/dialog')
 	}
 	const getData = () => {
-		msg_date.value.push("2-17")
-		msg_date.value.push("2-15")
-		msg_date.value.push("2-13")
-		msg_date.value.push("2-11")
+		msg_date.value.push("2-17 15:32")
+		msg_date.value.push("2-15 11:02")
+		msg_date.value.push("2-13 17:14")
+		msg_date.value.push("2-11 9:38")
 	}
 	getData()
 </script>

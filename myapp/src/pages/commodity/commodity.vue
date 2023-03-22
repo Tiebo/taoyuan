@@ -2,17 +2,17 @@
 	<!-- 轮播图 -->
 	<view class="swiper_adv">
 		<!-- 轮播图区域 -->
-		<swiper :indicator-dots="true" :autoplay="true" :interval="3000" :duration="1000" :circular="true">
-			<!-- 循环渲染轮播图的 item 项 -->
-			<swiper-item v-for="i in commodity_data.img_data" :key="commodity_data.id">
-				<view class="swiper-item">
-					<!-- 动态绑定图片的 src 属性 -->
-					<image :src="i" mode="aspectFill" />
-				</view>
+		<swiper class="screen-swiper" :class="dotStyle?'square-dot':'round-dot'" :indicator-dots="true" :circular="true"
+			:autoplay="true" interval="2500" duration="1000">
+			<swiper-item v-for="(i,index) in commodity_data.img_data" :key="index">
+				<image style="border-radius: 0;" :src="i" mode="aspectFill"></image>
 			</swiper-item>
 		</swiper>
 	</view>
-	<view class="con-body">
+	<view>
+
+	</view>
+	<scroll-view class="con-body">
 		<view class="goods-content-header">
 			<view class="goods-price">
 				<span style="font-size: 28rpx;">￥</span>
@@ -44,16 +44,20 @@
 
 			<view class="info-item-label">
 				<view class="label">
-					发货
+					<uni-icons custom-prefix="iconfont" size="23" type="icon-tyfahuo"></uni-icons>
 				</view>
 				<view class="label-info">
-					{{commodity_data.origin}}
+					<text style="font-weight: 600;">{{commodity_data.origin}}</text>
+					<text style="margin-left: 20rpx;"> 快递：免邮费</text>
+					<view style="margin-top: 10rpx;color: #747474; font-size: 24rpx;">
+						配送至：{{'成都市 新都区 新都街道'}}
+					</view>
 				</view>
-				<span style="position: absolute; right: 5%;color: #747474;"> > </span>
+				<text style="display: flex;align-items: center;position: absolute;right: 5%; color: #747474;"> > </text>
 			</view>
 			<view class="info-item-label">
 				<view class="label">
-					选择
+					<uni-icons custom-prefix="iconfont" size="22" type="icon-tyfenlei"></uni-icons>
 				</view>
 				<view class="label-info">
 					已选：{{commodity_data.price_des[0]}}
@@ -61,8 +65,8 @@
 				<span style="position: absolute; right: 5%;color: #747474;"> > </span>
 			</view>
 			<view class="info-item-label">
-				<view class="label">
-					保障
+				<view class="label" style="color: gray;">
+					<uni-icons custom-prefix="iconfont" size="22" type="icon-tyaixin"></uni-icons>
 				</view>
 				<view class="label-info">
 					假一赔四&nbsp;七天无理由退货
@@ -71,7 +75,7 @@
 			</view>
 			<view class="info-item-label">
 				<view class="label">
-					参数
+					<uni-icons custom-prefix="iconfont" size="22" type="icon-typinpaizhekou"></uni-icons>
 				</view>
 				<view class="label-info">
 					品牌&nbsp;型号...
@@ -108,6 +112,7 @@
 		<view style="text-align: center;font-size: 28rpx; color: #747474; margin-top: 20rpx;">
 			——宝贝详情——
 		</view>
+
 		<view class="goods-content-header">
 			<view v-if="commodity_data.type == 0">
 				<image mode="aspectFill" style="width: 100%; height: 600rpx;"
@@ -125,8 +130,11 @@
 				src="https://i.328888.xyz/2023/02/25/EUiIt.jpeg">
 			</image>
 		</view>
-	</view>
-	<bottom-cart></bottom-cart>
+	</scroll-view>
+
+	<commodity-cart></commodity-cart>
+
+	<buy v-if="controllStore.is_buy"></buy>
 </template>
 
 <script setup>
@@ -134,10 +142,12 @@
 		onLoad
 	} from "@dcloudio/uni-app";
 	import {
-		onMounted,
 		reactive,
 		ref
 	} from "vue";
+	import {
+		useControllStore
+	} from "../../stores/controll";
 	import {
 		re_get
 	} from "../../utils/request";
@@ -145,6 +155,9 @@
 		showMsg
 	} from "../../utils/utils";
 
+	const controllStore = useControllStore()
+	let dotStyle = ref(true)
+	let is_show = ref(false)
 	let commodity_data = reactive({
 		name: "",
 		id: "",
@@ -158,23 +171,25 @@
 		shop_photo: ""
 	})
 	const getData = async (id) => {
-		await re_get("http://127.0.0.1:8000/api/commodity/info/", {
-			"id": id
-		}).then(res => {
-			commodity_data.img_data = res.data.photo;
-			commodity_data.id = res.data.id;
-			commodity_data.name = res.data.name;
-			commodity_data.origin = res.data.origin;
-			commodity_data.price = res.data.price.split(',');
-			commodity_data.price_des = res.data.price_des.split(',');
-			commodity_data.unit = res.data.unit;
-			commodity_data.type = res.data.type;
-			commodity_data.shop_name = res.data.shop_name;
-			commodity_data.shop_photo = res.data.shop_photo;
-		})
+		let resp = await re_get(
+			"/api/commodity/info/", {
+				"id": id
+			}, uni.getStorageSync("token"));
+		let data = resp.data;
+		commodity_data.img_data = data.photo;
+		commodity_data.id = data.id;
+		commodity_data.name = data.name;
+		commodity_data.origin = data.origin;
+		commodity_data.price = data.price.split(',');
+		commodity_data.price_des = data.price_des.split(',');
+		commodity_data.unit = data.unit;
+		commodity_data.type = data.type;
+		commodity_data.shop_name = data.shop_name;
+		commodity_data.shop_photo = data.shop_photo;
+
+		controllStore.comm_id = data.id;
 	};
 	onLoad(option => {
-		console.log(option.id);
 		getData(option.id);
 	})
 </script>
@@ -211,7 +226,7 @@
 
 	.label-info {
 		font-weight: 540;
-		font-size: 26rpx;
+		font-size: 24rpx;
 		margin-top: 10rpx;
 		margin-bottom: 20rpx;
 	}
@@ -222,8 +237,8 @@
 
 	.goods-content-info {
 		margin-top: 20rpx;
-		background-color: #f9f9f9;
-		border-radius: 20rpx 20rpx 0 0;
+		background-color: rgba(243, 243, 243, 0.8);
+		border-radius: 20rpx;
 		padding: 20rpx;
 	}
 
@@ -231,8 +246,8 @@
 		display: grid;
 		grid-template-columns: 25% 50% 25%;
 		margin-top: 20rpx;
-		background-color: #f9f9f9;
-		border-radius: 40rpx 40rpx 0 0;
+		background-color: rgba(243, 243, 243, 0.8);
+		border-radius: 20rpx;
 		padding: 20rpx;
 	}
 
@@ -306,10 +321,14 @@
 
 
 	.goods-price {
-		margin-left: 20rpx;
+
+		padding: 10rpx 20rpx;
+		border-radius: 25rpx;
+		background-color: rgba(222, 102, 140, 0.2);
+		margin: 0 40rpx 0 20rpx;
 		font-size: 40rpx;
 		font-weight: 600;
-		color: #fc4f06;
+		color: #ff0000;
 	}
 
 	.user-info-data-row>.data-col {
@@ -320,14 +339,15 @@
 
 	.goods-content-header {
 		margin-top: 20rpx;
-		background-color: #f9f9f9;
-		border-radius: 40rpx 40rpx 0 0;
-		padding: 20rpx;
+		background-color: rgba(243, 243, 243, 0.8);
+		border-radius: 20rpx;
+		padding: 20rpx 10rpx;
 	}
 
 	.con-body {
-		background-color: #f0f0f0;
+		overflow-y: hidden;
 		opacity: 0.9;
-		padding: 5rpx 15rpx 100rpx 15rpx;
+		padding: 5rpx 20rpx 100rpx 15rpx;
+		z-index: 5;
 	}
 </style>

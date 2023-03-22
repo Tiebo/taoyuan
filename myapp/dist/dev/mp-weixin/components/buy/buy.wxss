@@ -1,0 +1,124 @@
+
+.body-number.data-v-f1ed9871 {
+		display: flex;
+		font-size: 28rpx;
+		margin: 30rpx;
+}
+.buy-price.data-v-f1ed9871 {
+		margin-bottom: 30rpx;
+		font-size: 26rpx;
+		font-weight: 600;
+}
+.icon.data-v-f1ed9871 {
+		background-color: #fd2600;
+		color: #ffffff;
+		padding: 10rpx;
+		border-radius: 50%;
+}
+.goods-item-buy.data-v-f1ed9871 {
+		margin-right: 60rpx;
+		background-image: linear-gradient(to right, #fd6c04 0%, #fd0000 100%);
+		font-size: 26rpx;
+		font-weight: 600;
+		height: 70rpx;
+		letter-spacing: 2rpx;
+		color: #f8f8f8;
+		text-align: center;
+		border-radius: 40rpx;
+		line-height: 65rpx;
+}
+.footer.data-v-f1ed9871 {
+		position: fixed;
+		bottom: 0%;
+		background-color: #ffffff;
+		width: 100%;
+		padding: 30rpx;
+		z-index: 50;
+}
+.buy-footer.data-v-f1ed9871 {
+		position: inherit;
+}
+.item-details.data-v-f1ed9871 {
+		border-radius: 20rpx;
+		font-size: 22rpx;
+		padding: 10rpx 20rpx 3rpx 20rpx;
+		background-color: rgba(239, 239, 239, 0.5);
+		text-overflow: -o-ellipsis-lastline;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		display: -webkit-box;
+		-webkit-line-clamp: 2;
+		line-clamp: 2;
+		line-height: 35rpx;
+		-webkit-box-orient: vertical;
+}
+.body-item.data-v-f1ed9871 {
+		display: grid;
+		grid-template-columns: 33% 33% 33%;
+}
+.body-item-card.data-v-f1ed9871 {
+		border-radius: 20rpx;
+		text-align: center;
+		margin-left: 20rpx;
+		margin-top: 20rpx;
+}
+.body-item-card.active.data-v-f1ed9871 {
+		border: #ff5500 solid 4rpx;
+		border-radius: 20rpx;
+}
+.body-item>.body-item-card>image.data-v-f1ed9871 {
+		border-radius: 20rpx;
+		width: 25vw;
+		height: 25vw;
+}
+.body-title.data-v-f1ed9871 {
+		font-size: 24rpx;
+}
+.buy-body.data-v-f1ed9871 {
+		background-color: #ffffff;
+		padding: 20rpx;
+		border-radius: 20rpx;
+		margin-top: 20rpx;
+}
+.buy-address-item>text.data-v-f1ed9871 {
+		text-overflow: -o-ellipsis-lastline;
+		overflow: hidden;
+		text-overflow: clip;
+		display: -webkit-box;
+		-webkit-line-clamp: 1;
+		-webkit-box-orient: vertical;
+}
+.buy-address.data-v-f1ed9871 {
+		border-radius: 25rpx;
+		margin-top: 20rpx;
+		display: grid;
+		grid-template-columns: 10% 85% 5%;
+		align-items: center;
+		padding: 20rpx;
+		background-color: #ffffff;
+}
+.footer-shop.data-v-f1ed9871 {
+		padding: 30rpx;
+		background-color: #efefef;
+}
+.shop-buy.data-v-f1ed9871 {
+		background-color: #efefef;
+		height: 80vh;
+}
+.buy-title.data-v-f1ed9871 {
+		display: flex;
+		align-items: center;
+}
+.buy-photo.data-v-f1ed9871 {
+		margin-right: 30rpx;
+		border-radius: 20rpx;
+		width: 100rpx;
+		height: 100rpx;
+}
+.buy-con.data-v-f1ed9871 {
+		padding: 20rpx;
+		border-radius: 25rpx 25rpx 0 0;
+		background-color: #ffffff;
+		height: 100%;
+		opacity: 1;
+}

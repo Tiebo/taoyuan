@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com</groupId>
-    <artifactId>yybackend</artifactId>
+    <artifactId>taoyuanbackend</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>hlwjbackend</name>
-    <description>hlwjbackend</description>
+    <name>taoyuanbackend</name>
+    <description>taoyuanbackend</description>
     <properties>
         <java.version>1.8</java.version>
     </properties>
@@ -33,7 +33,7 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-security</artifactId>
-            <version>2.7.3</version>
+            <version>3.0.4</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -44,7 +44,7 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-jdbc</artifactId>
-            <version>2.7.3</version>
+            <version>3.0.4</version>
             <exclusions>
                 <!-- 排除自带的logback依赖 -->
                 <exclusion>
@@ -113,30 +113,20 @@
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-devtools</artifactId>
-            <optional>true</optional>
-            <scope>true</scope>
+            <artifactId>spring-boot</artifactId>
+            <version>2.7.8</version>
         </dependency>
 
     </dependencies>
 
-
     <build>
-
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>2.7.8</version>
                 <configuration>
-                    <excludes>
-                        <skip>true</skip>
-                        <!--fork :  如果没有该项配置，这个devtools不会起作用，即应用不会restart -->
-                        <fork>true</fork>
-                        <exclude>
-                            <groupId>org.projectlombok</groupId>
-                            <artifactId>lombok</artifactId>
-                        </exclude>
-                    </excludes>
+                    <mainClass>com.taoyuanbackend.taoyuanbackendApplication</mainClass>
                 </configuration>
             </plugin>
         </plugins>

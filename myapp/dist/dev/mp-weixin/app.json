@@ -1,5 +1,7 @@
 {
   "pages": [
+    "pages/login/index",
+    "pages/login/login",
     "pages/home/home",
     "pages/cart/cart",
     "pages/message/message",
@@ -11,7 +13,11 @@
     "pages/list/article/article",
     "pages/list/articleBody/articleBody",
     "pages/money/money",
-    "pages/message/dialog/dialog"
+    "pages/message/dialog/dialog",
+    "pages/login/register",
+    "pages/list/arboriculture/arboriculture",
+    "pages/user/dynamics/dynamics",
+    "pages/user/expressage/expressage"
   ],
   "window": {
     "navigationBarTextStyle": "black",
@@ -50,5 +56,6 @@
       }
     ]
   },
+  "permission": {},
   "usingComponents": {}
 }

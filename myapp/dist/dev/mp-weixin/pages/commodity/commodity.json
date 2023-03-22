@@ -1,8 +1,9 @@
 {
   "navigationBarTitleText": "",
-  "enablePullDownRefresh": true,
+  "enablePullDownRefresh": false,
   "usingComponents": {
     "uni-icons": "../../uni_modules/uni-icons/components/uni-icons/uni-icons",
-    "bottom-cart": "../../components/bottom-cart/bottom-cart"
+    "commodity-cart": "../../components/commodity-cart/commodity-cart",
+    "buy": "../../components/buy/buy"
   }
 }

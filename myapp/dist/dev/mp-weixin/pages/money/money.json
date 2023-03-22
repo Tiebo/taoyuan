@@ -1,5 +1,5 @@
 {
   "navigationBarTitleText": "钱包",
-  "enablePullDownRefresh": true,
+  "enablePullDownRefresh": false,
   "usingComponents": {}
 }
